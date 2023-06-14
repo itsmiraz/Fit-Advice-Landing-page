@@ -2,6 +2,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import LandingPage from "./Pages/LandingPage/LandingPage"
 import Mainlayout from "./Layouts/MainLayout/Mainlayout"
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy"
+import TermNConditions from "./Pages/TermsNConditions/TermNConditions";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
 
@@ -12,20 +14,24 @@ function App() {
       element: <Mainlayout />,
       children: [
         {
-          path: '/',
-          element: <LandingPage />
-
+          path: "/",
+          element: <LandingPage />,
         },
         {
-          path: '/privacyPolicy',
-          element: <PrivacyPolicy />
-
-        }
-      ]
-    }
-
-
-  ])
+          path: "/privacyPolicy",
+          element: <PrivacyPolicy />,
+        },
+        {
+          path: "/termsNconditions",
+          element: <TermNConditions />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />
+        },
+      ],
+    },
+  ]);
 
   return (
     <div className="max-w-[1920px] scroll-smooth  mx-auto relative transition-all duration-300">
