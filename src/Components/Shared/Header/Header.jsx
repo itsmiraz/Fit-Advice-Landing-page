@@ -9,8 +9,8 @@ const Header = () => {
     const [show, setShow] = useState(false)
 
     return (
-      <div className=" sticky top-0 z-50 bg-white mx-auto py-2 px-2 md:my-6 ">
-        <div className="container mx-auto justify-between items-center  flex">
+      <div className="sticky top-0 z-50 bg-white mx-auto py-2 md:my-6 ">
+        <div className="justify-between items-center  flex">
           <Link to={"/"}>
             <img src={logo} className="md:w-40 w-24 relative z-50 " alt="" />
           </Link>
