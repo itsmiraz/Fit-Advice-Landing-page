@@ -37,7 +37,7 @@ const Contact = () => {
           </div>
         </div>
         {/* w-[565px] h-[838px] */}
-        <div className="p-8 lg:col-span-3 lg:p-6">
+        <div className="p-8 lg:col-span-3 lg:p-6 lg:pl-56">
           <form className="space-y-4">
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">

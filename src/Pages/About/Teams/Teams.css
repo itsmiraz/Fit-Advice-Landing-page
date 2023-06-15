@@ -1,0 +1,13 @@
+.icons {
+  background: linear-gradient(180deg, #3EFFFF 2.54%, #00FF99 87.3%);
+  border-radius: 100px;
+  transition: background 0.3s ease-in-out;
+}
+
+.icons:hover {
+  background: linear-gradient(180deg, #00FF99 2.54%, #3EFFFF 87.3%);
+}
+
+.icons:not(:hover) {
+  background: black;
+}
