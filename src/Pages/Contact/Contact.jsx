@@ -24,7 +24,7 @@ const Contact = () => {
             Email Adress
           </h3>
           <h4 className="font-normal text-[16px] line-[20px] mb-[54px] text-[#231F20]">
-            Support@fitadvice.eu
+            support@fitadvice.eu
           </h4>
           <h3 className="text-[32px] line-[39px] font-bold mb-[20px] text-[#231F20]">
             Social Networks
