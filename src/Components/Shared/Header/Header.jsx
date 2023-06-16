@@ -17,7 +17,7 @@ const Header = () => {
           <div
             className={`flex md:flex-row flex-col bg-white md:w-fit w-full right-2 md:space-y-0 space-y-2 md:static absolute ${
               show ? " top-12 " : "top-[-500px]"
-            }  ease-in-out duration-300 gap-x-10 items-end md:items-center`}
+            }  ease-in-out duration-300 gap-x-10 items-center md:items-center`}
           >
             <Link to="/">
               <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">

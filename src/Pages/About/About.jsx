@@ -4,6 +4,7 @@ import Teams from "./Teams/Teams";
 import Values from "./Values";
 import Vission from "./Vission";
 import icons from '../../assets/About-Page/FitAdvice - minimal full color.svg'
+import { ScrollRestoration } from "react-router-dom";
 
 
 const About = () => {
@@ -44,6 +45,7 @@ const About = () => {
         <Vission />
         <Values />
         <Teams />
+        <ScrollRestoration />
       </section>
     );
 };

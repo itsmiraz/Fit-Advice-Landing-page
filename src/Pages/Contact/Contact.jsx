@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
+import { Link, ScrollRestoration } from "react-router-dom";
+import emailjs from "@emailjs/browser"; // <ScroollRestoration/>
 const Contact = () => {
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -40,7 +40,7 @@ const Contact = () => {
 
 
   return (
-    <div className="py-[60px] px-3  md:px-20">
+    <div className="py-[60px] px-0 md:px-0 lg:px-20">
       <div className="grid grid-cols-1 gap-[100px] lg:grid-cols-5">
         <div className="lg:col-span-2 text-center md:text-center lg:text-left">
           <h1 className="lg:text-[64px] text-[54px] font-bold mb-[20px] text-[#231F20]">
@@ -69,8 +69,7 @@ const Contact = () => {
         </div>
         {/* w-[565px] h-[838px] */}
         <div className="p-8 lg:col-span-3 lg:p-6 lg:pl-56">
-          <form   ref={form}
-          onSubmit={sendEmail} className="space-y-4">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">
                 <label className="block mb-4 text-[16px] font-medium  text-[#231F20] ">
@@ -89,7 +88,7 @@ const Contact = () => {
                   Last Name*
                 </label>
                 <input
-                    required
+                  required
                   type="text"
                   name="last_name"
                   className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg "
@@ -102,7 +101,7 @@ const Contact = () => {
                 Email address*
               </label>
               <input
-                  required
+                required
                 type="email"
                 name="email"
                 className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg "
@@ -114,7 +113,7 @@ const Contact = () => {
                 Tell us about yourself*
               </label>
               <select
-                  required
+                required
                 className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg text-[#B2B2B2]"
                 value={selectedOption}
                 onChange={handleChange}
@@ -131,21 +130,22 @@ const Contact = () => {
                 Message*
               </label>
               <textarea
-                  required
+                required
                 name="message"
                 className="block w-full h-32 px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg md:h-56"
               ></textarea>
             </div>
 
-            <button disabled={send} className="w-full px-6 py-4 mt-4 text-lg md:text-xl font-semibold rounded-xl  bg-gradient-to-b from-[#3EFFFF] to-[#00FF99] text-[#231F20]">
-              {
-                send ? "  Submiting":"  Submit"
-             }
-            
+            <button
+              disabled={send}
+              className="w-full py-4 mt-4 text-lg md:text-xl font-semibold rounded-xl  bg-gradient-to-b from-[#3EFFFF] to-[#00FF99] text-[#231F20]"
+            >
+              {send ? "  Submiting" : "  Submit"}
             </button>
           </form>
         </div>
       </div>
+      <ScrollRestoration />
     </div>
   );
 };

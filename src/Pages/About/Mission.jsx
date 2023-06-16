@@ -2,17 +2,12 @@ import batminton from "../../assets/About-Page/batminton.png";
 
 const Mission = () => {
   return (
-    <section className="grid my-10 px-2 lg:my-60 z-30 relative grid-cols-1  lg:grid-cols-2 place-items-center lg:px-40">
+    <section className="grid pt-[45px] md:pt-[79px] lg:pt-[225px] z-30 relative grid-cols-1 gap-[91px] lg:grid-cols-2 place-items-center lg:px-40">
       <div className="">
-        <img
-          src={batminton}
-          alt="a boy playing"
-          className=""
-        />
+        <img src={batminton} alt="a boy playing" className="" />
       </div>
 
       <div className="text-[#231F20]  text-center lg:text-start ">
-        
         <h1 className="text-[42px] font-bold mx-auto lg:mx-0 my-6 lg:my-0  w-fit">
           Our Mission
         </h1>

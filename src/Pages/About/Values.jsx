@@ -29,9 +29,9 @@ const Values = () => {
         body: "We are passionate about physical well-being. We are committed to supporting and inspiring our users on their journey towards a healthy, balanced life.",
       },
     ];
-// console.log(datas)
+    
     return (
-      <div className="pt-[173px] px-2 md:px-4 text-[#231F20]">
+      <div className="pt-[97px] lg:pt-[157] md:pt-[60px] md:px-4 text-[#231F20]">
         <h1 className="text-[42px] font-bold text-center">Our Values</h1>
         <p className="text-2xl font-medium pt-[16px] text-center">
        

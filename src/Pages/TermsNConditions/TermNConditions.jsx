@@ -1,3 +1,4 @@
+import { ScrollRestoration } from 'react-router-dom';
 import bgIcon from '../../assets/FitAdvice - minimal full color.svg'
 
 const TermNConditions = () => {
@@ -164,6 +165,7 @@ const TermNConditions = () => {
         <p className="text-xs mt-28 mb-6">
           This terms and condition as of June 01, 2023
         </p>
+        <ScrollRestoration />
       </div>
     );
 };
