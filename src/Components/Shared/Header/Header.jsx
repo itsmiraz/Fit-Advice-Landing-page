@@ -9,29 +9,29 @@ const Header = () => {
     const [show, setShow] = useState(false)
 
     return (
-      <div className="sticky top-0 z-50 bg-white mx-auto py-2 md:my-6 ">
-        <div className="justify-between px-3  md:px-20 items-center  flex">
+      <div className="sticky shadow-lg top-0 z-50 bg-white mx-auto py-6 md:mb-6 ">
+        <div className="justify-between px-3 md:px-20  2xl::px-48 items-center  flex">
           <Link to={"/"}>
             <img src={logo} className="md:w-40 w-24 relative z-50 " alt="" />
           </Link>
           <div
-            className={`flex md:flex-row flex-col bg-white md:w-fit w-full right-2 md:space-y-0 space-y-2 md:static absolute ${
+            className={`flex md:shadow-none shadow-lg md:flex-row flex-col bg-white md:w-fit w-full right-0 md:pb-0 pb-4 md:space-y-0 space-y-6 md:static absolute ${
               show ? " top-12 " : "top-[-500px]"
             }  ease-in-out duration-300 gap-x-10 items-center md:items-center`}
           >
             <Link to="/">
-              <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
+              <p onClick={()=>setShow(!show)} className="text-xl text-[#333333] font-medium hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
                 Home
               </p>
             </Link>
-            <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
+            <p onClick={()=>setShow(!show)} className="text-xl text-[#333333] font-medium hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
               Corporate
             </p>
-            <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
+            <p onClick={()=>setShow(!show)} className="text-xl text-[#333333] font-medium hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
               Become coach
             </p>
             <Link to={"/contact"}>
-              <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
+              <p onClick={()=>setShow(!show)} className="text-xl text-[#333333] font-medium hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
                 Contact
               </p>
             </Link>

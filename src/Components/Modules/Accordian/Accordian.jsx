@@ -8,12 +8,12 @@ const Accordion = ({ title, content }) => {
     };
 
     return (
-        <div className="my-10 p-5 border-2 boder-black">
+        <div className="my-10 select-none p-5 border-2 boder-black">
             <button
                 className="w-full  text-left flex  justify-between items-center"
                 onClick={toggleAccordion}
             >
-                <p className='font-medium  md:font-bold text-sm md:text-xl'>  {title}</p>
+                <p className='font-bold text-[#231F20]  md:font-bold text-[16px] md:text-xl'>  {title}</p>
                 <div>
                     {
 

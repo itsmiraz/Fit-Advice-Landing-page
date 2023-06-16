@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import partnerImg from '../../../assets/EA_LOGO 1.png'
 
 const Footer = () => {
- 
+
 
   return (
     <div className="bg-[#100F1F] overflow-hidden relative px-4 md:px-16 py-4 pt-10">
-      <div className="container relative z-50  px-4 md:pr-32 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
-        <div className="col-span-2 flex flex-col justify-center md:justify-start md:items-start items-center">
+      <div className="container relative z-40  px-4 md:pr-32 grid gap-10 grid-cols-5">
+        <div className="col-span-5 md:col-span-2 flex flex-col justify-center md:justify-start md:items-start items-center">
           <div className="flex gap-2 items-center">
             <img src={logo} className="w-10" alt="" />
             <h1 className="text-3xl font-bold text-white">FitAdvice</h1>
@@ -20,21 +20,26 @@ const Footer = () => {
           </h1>
           <div>
             <div className="flex items-center">
-              <img src={applestorebtn} alt="" />
-              <a
-                href="https://play.google.com/store/apps/details?id=com.fitadvice.fitadvice"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <img src={playstorebtn} alt="" />
-              </a>
+              <div>
+                <img src={applestorebtn} alt="" />
+
+              </div>
+              <div>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.fitadvice.fitadvice"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img src={playstorebtn} alt="" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="col-span-1">
+        <div className="col-span-5 flex flex-col justify-center md:justify-start items-center md:items-start  md:col-span-1">
           <h1 className="text-2xl font-semibold text-white">Explore</h1>
-          <div className=" py-10">
+          <div className="py-4  md:py-10 flex flex-col justify-center md:justify-start items-center md:items-start">
             <Link to={"/"}>
               <p className="text-lg my-2 text-white"> Home</p>
             </Link>
@@ -47,9 +52,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-5 flex flex-col justify-center md:justify-start items-center md:items-start  md:col-span-1">
           <h1 className="text-2xl font-semibold text-white">Ressources</h1>
-          <div className="py-10">
+          <div className="py-4  md:py-10 flex flex-col justify-center md:justify-start items-center md:items-start">
             <Link to={'/contact'}>
               <p className="text-lg my-2 text-white">
                 {" "}
@@ -67,7 +72,7 @@ const Footer = () => {
 
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-5 flex flex-col justify-center md:justify-start items-center md:items-start  md:col-span-1">
           <h1 className="text-2xl font-semibold text-white">Social Networks</h1>
           <div className="flex gap-x-4 my-10">
             <div className="border bg-transparent duration-200 hover:border-none hover:bg-gradient-to-b from-[#3EFFFF] to-[#00FF99] rounded-full p-6">
@@ -154,7 +159,10 @@ const Footer = () => {
 
 
           <h1 className="text-2xl font-semibold text-white">Official Partner</h1>
-          <img src={partnerImg} className="my-4" alt="" />
+          <Link target="_blank" to={'https://www.europeactive.eu/'}>
+
+            <img src={partnerImg} className="my-4" alt="" />
+          </Link>
         </div>
       </div>
       <div className="w-full h-[2px] bg-[#66666680]"></div>
