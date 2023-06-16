@@ -9,14 +9,14 @@ const Header = () => {
     const [show, setShow] = useState(false)
 
     return (
-      <div className="sticky shadow-lg top-0 z-50 bg-white mx-auto py-6 md:mb-6 ">
+      <div className="sticky shadow-lg top-0 z-50 bg-white mx-auto py-4 lg:py-6 md:mb-6 ">
         <div className="justify-between px-3 md:px-20  2xl::px-48 items-center  flex">
           <Link to={"/"}>
             <img src={logo} className="md:w-40 w-24 relative z-50 " alt="" />
           </Link>
           <div
-            className={`flex md:shadow-none shadow-lg md:flex-row flex-col bg-white md:w-fit w-full right-0 md:pb-0 pb-4 md:space-y-0 space-y-6 md:static absolute ${
-              show ? " top-12 " : "top-[-500px]"
+            className={`flex lg:shadow-none shadow-lg lg:flex-row flex-col bg-white lg:w-fit w-full right-0 lg:pb-0 pb-4 lg:space-y-0 space-y-6 lg:static absolute ${
+              show ? " md:top-14 top-12 " : "top-[-500px]"
             }  ease-in-out duration-300 gap-x-10 items-center md:items-center`}
           >
             <Link to="/">
@@ -45,7 +45,7 @@ const Header = () => {
           </div>
           <div
             onClick={() => setShow(!show)}
-            className="md:hidden md:absolute static block"
+            className="lg:hidden lg:absolute static block"
           >
             {show ? (
               <>
