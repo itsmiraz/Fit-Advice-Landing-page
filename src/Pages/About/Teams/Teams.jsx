@@ -1,19 +1,31 @@
+import { Link } from "react-router-dom";
 import team1 from "../../../assets/About-Page/team1.png";
 import team2 from "../../../assets/About-Page/team2.png";
 import "./Teams.css";
 
 const Teams = () => {
+
+
+   const handleContactClick = (email) => {
+    window.location.href = `mailto:${email}`;
+  };
+
+
+
   const datas = [
     {
       name: "Loïc MOUTOMBI",
       title: "Founder Partner",
-      para: "There are many variations of passages of Lorem Ipsum available",
+      linkdin :"https://www.linkedin.com/in/lo%C3%AFc-moutombi-835421137/?originalSubdomain=be",
+     email:"loic.moutombi@fitadvice.eu",
       img: team1,
     },
     {
       name: "François PETIT",
       title: "Founder Partner",
-      para: "There are many variations of passages of Lorem Ipsum available",
+      linkdin :"https://www.linkedin.com/in/fran%C3%A7ois-petit-626ba15/?originalSubdomain=lu",
+      email:"francois.petit@fitadvice.eu",
+     
       img: team2,
     },
   ];
@@ -28,26 +40,27 @@ const Teams = () => {
         Just take a look - each member of the team is watching your every <br />
         gesture and will hear your every whisper.
       </p>
-      {/* flex flex-col-reverse gap-[74px] (is not working for small device)*/}
       <div
-        className=" md:flex md:justify-center md:items-center md:gap-[32px] lg:flex lg:justify-center lg:items-center lg:gap-[32px] pt-[48px] pb-[90px]"
+        className=" flex md:flex-row flex-col justify-center items-center md:gap-[32px] lg:flex lg:justify-center lg:items-center gap-16 lg:gap-[32px] pt-[48px] pb-[90px]"
       >
         {datas.map((data, i) => (
           <div
             key={i}
-            className=" w-[270px] h-[427px] md:w-[310px] md:h-[447px] lg:w-[310px] lg:h-[447px] border border-[#DCDCDC] rounded-[30px] text-center pt-8"
+            className="w-fit border border-[#DCDCDC] rounded-[30px] text-center p-8"
           >
             <img src={data.img} alt="teams" />
             <p className="text-[18px] font-semibold ">{data.name}</p>
             <p className="text-[14px] font-medium">{data.title}</p>
-            <p className="tracking-tight text-[14px] font-normal">
-              {data.para}
-            </p>
+            
             <div className="flex gap-4 justify-center items-center pt-6">
+            
+              <Link to={data.linkdin}>
+              
               <p className="bg-[#252525] text-white icons w-[36px] h-[36px] flex justify-center items-center hover:cursor-pointer">
                 in
               </p>
-              <p className="bg-[#252525] text-white icons w-[36px] h-[36px] flex justify-center items-center hover:cursor-pointer">
+              </Link>
+              <p onClick={()=>handleContactClick(data.email)} className="bg-[#252525] text-white icons w-[36px] h-[36px] flex justify-center items-center hover:cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

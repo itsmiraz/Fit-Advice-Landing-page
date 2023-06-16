@@ -1,23 +1,22 @@
 import batminton from "../../assets/About-Page/batminton.png";
 
-
 const Mission = () => {
   return (
-    <section className="pt-[200px] lg:flex lg:justify-center lg:gap-x-20">
+    <section className="grid my-10 px-2 lg:my-60 z-30 relative grid-cols-1  lg:grid-cols-2 place-items-center lg:px-40">
       <div className="">
         <img
           src={batminton}
           alt="a boy playing"
-          className="w-[400px] h-[500px] md:ml-36 md:w-[450px]"
+          className=""
         />
       </div>
 
-      <div className="text-[#231F20] pt-[64px] md:pt-[74px] lg:pt-[152px]">
+      <div className="text-[#231F20]  text-center lg:text-start ">
         
-        <h1 className="lg:text-6xl text-5xl font-bold text-center">
+        <h1 className="text-[42px] font-bold mx-auto lg:mx-0 my-6 lg:my-0  w-fit">
           Our Mission
         </h1>
-        <p className="text-center text-[20px] pt-16 lg:w-[641px] md:text-center lg:text-left lg:tracking-tight">
+        <p className="font-medium leading-[39px]  pt-0 lg:pt-[41px] text-[24px] ">
           Our mission at FitAdvice is to inspire and support individuals on
           their journey towards a healthier, more balanced life. We are
           committed to providing quality, personalised coaching services,

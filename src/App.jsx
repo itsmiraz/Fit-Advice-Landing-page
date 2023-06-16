@@ -39,7 +39,7 @@ function App() {
   ]);
 
   return (
-    <div className="max-w-[1920px] scroll-smooth px-10 mx-auto relative transition-all duration-300">
+    <div className="max-w-[1920px] scroll-smooth  mx-auto relative transition-all duration-300">
      <RouterProvider router={router}/>
     </div>
   )

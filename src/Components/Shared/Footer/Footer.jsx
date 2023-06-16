@@ -2,14 +2,14 @@ import logo from "../../../assets/favicon.svg";
 import playstorebtn from "../../../assets/Home-Page/Google Play.png";
 import applestorebtn from "../../../assets/Home-Page/App Store.png";
 import { Link } from "react-router-dom";
+import partnerImg from '../../../assets/EA_LOGO 1.png'
+
 const Footer = () => {
-  const handleContactClick = () => {
-    window.location.href = "mailto:support@fitadvice.eu";
-  };
+ 
 
   return (
-    <div className="bg-[#100F1F] overflow-hidden relative px-4 md:px-10 py-4 pt-10">
-      <div className="container relative z-50  px-4 md:px-32 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 mx-auto">
+    <div className="bg-[#100F1F] overflow-hidden relative px-4 md:px-16 py-4 pt-10">
+      <div className="container relative z-50  px-4 md:pr-32 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
         <div className="col-span-2 flex flex-col justify-center md:justify-start md:items-start items-center">
           <div className="flex gap-2 items-center">
             <img src={logo} className="w-10" alt="" />
@@ -50,14 +50,21 @@ const Footer = () => {
         <div className="col-span-1">
           <h1 className="text-2xl font-semibold text-white">Ressources</h1>
           <div className="py-10">
-            <p onClick={handleContactClick} className="text-lg my-2 text-white">
-              {" "}
-              Contact us
-            </p>
-            <a href="#becomecoach">
+            <Link to={'/contact'}>
+              <p className="text-lg my-2 text-white">
+                {" "}
+                Contact us
+              </p>
+            </Link>
+            <Link to={'/contact'}>
               <p className="text-lg my-2 text-white">Become coach</p>
-            </a>
-            <p className="text-lg my-2 text-white"> Corporate</p>
+            </Link>
+            <Link to={'/contact'}>
+
+
+              <p className="text-lg my-2 text-white"> Corporate</p>
+            </Link>
+
           </div>
         </div>
         <div className="col-span-1">
@@ -144,6 +151,10 @@ const Footer = () => {
               </div>
             </a>
           </div>
+
+
+          <h1 className="text-2xl font-semibold text-white">Official Partner</h1>
+          <img src={partnerImg} className="my-4" alt="" />
         </div>
       </div>
       <div className="w-full h-[2px] bg-[#66666680]"></div>

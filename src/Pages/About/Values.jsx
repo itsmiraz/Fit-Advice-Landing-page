@@ -29,33 +29,33 @@ const Values = () => {
         body: "We are passionate about physical well-being. We are committed to supporting and inspiring our users on their journey towards a healthy, balanced life.",
       },
     ];
-console.log(datas)
+// console.log(datas)
     return (
-      <div className="pt-[173px] text-[#231F20]">
+      <div className="pt-[173px] px-2 md:px-4 text-[#231F20]">
         <h1 className="text-[42px] font-bold text-center">Our Values</h1>
-        <p className="text-2xl pt-[16px] text-center">
-          <span>
+        <p className="text-2xl font-medium pt-[16px] text-center">
+       
             We believe that the only way to realise this vision is to respect
             six core values.
-          </span>
-          <br />
-          <span>
+        
+          <br className="lg:block hidden"/>
+         
             These values define how we work internally and how we interact with
             our customers.
-          </span>
+       
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-14 pt-[74px] pb-[157px]">
+        <div className="container mx-auto px-4 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14 pt-[74px] pb-[157px]">
           {datas.map((data, index) => (
             <div
               key={index}
-              className="relative block rounded-[25px] border-b-4 border-[#3EFFFF]  shadow-xl p-4 sm:p-6 lg:p-4"
+              className="relative block rounded-2xl border-b-[5px] border-[#00FF99]  shadow-xl p-4 sm:p-6 lg:p-4"
             >
               <div className="flex-col-reverse text-center pt-[40px]">
-                <h1 className="text-[17px] md:text-[18px] lg:text-[20px] font-bold">
+                <h1 className="text-[24px] font-bold">
                   {data.title}
                 </h1>
-                <p className="text-xl pt-[26px]">{data.body}</p>
+                <p className="text-xl text-[#231F20] lg:pt-[26px]">{data.body}</p>
               </div>
             </div>
           ))}
