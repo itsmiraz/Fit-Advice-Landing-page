@@ -141,6 +141,9 @@ const LandingPage = () => {
         </div>
       </div>
 
+      
+
+
       {/* What we Offer */}
       <div className="md:px-20 2xl:px-20   my-10 md:my-32 px-6 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-10 md:gap-20">
         <div className="order-first lg:order-first md:order-last">
@@ -760,6 +763,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      
 
       {/* Still Have a Question */}
       <div>

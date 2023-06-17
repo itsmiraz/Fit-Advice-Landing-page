@@ -19,7 +19,7 @@ const About = () => {
           viewBox="0 0 325 324"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute bottom-32 right-56 md:-bottom-24 md:-left-32 lg:-top-48 lg:-left-36 hidden lg:block md:block"
+          className="absolute bottom-32 right-56 md:-bottom-24 md:-left-32 lg:top-48 lg:-left-36 hidden lg:block md:block"
         >
           <path
             opacity="0.08"
