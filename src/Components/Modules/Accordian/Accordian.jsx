@@ -14,7 +14,7 @@ const Accordion = ({ title, content }) => {
                 onClick={toggleAccordion}
             >
                 <p className='font-bold text-[#231F20]  md:font-bold text-[16px] md:text-xl'>  {title}</p>
-                <div>
+                <div className='md:block hidden'>
                     {
 
                         isOpen ?
