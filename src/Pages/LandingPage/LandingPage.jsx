@@ -57,7 +57,7 @@ const LandingPage = () => {
   };
 
   return (
-    <section className="py-10 scroll-smooth">
+    <section className="py-10 px-[30px] md:px-0 lg:px-0 scroll-smooth">
       {/* Hero */}
       <div
         id="head"
@@ -82,7 +82,7 @@ const LandingPage = () => {
           </a>
 
           <svg
-            className="absolute top-0 -left-20"
+            className="absolute top-0 -left-20 hidden md:block lg:block"
             width="325"
             height="325"
             viewBox="0 0 325 325"
@@ -502,7 +502,7 @@ const LandingPage = () => {
 
 
         {/* for mobile device */}
-        <div className="flex flex-col gap-[40px] px-[90px] pt-[52px] md:hidden lg:hidden">
+        <div className="flex flex-col gap-[40px] px-[50px] pt-[52px] md:hidden lg:hidden">
           {mobiles.map((m, i) => (
             <img key={i} src={m.img} alt="" />
           ))}
@@ -796,7 +796,7 @@ const LandingPage = () => {
             alt=""
           />
 
-          <div className="p-2 text-center md:text-start md:p-6 lg:pt-20  lg:p-20 rounded-xl bg-gradient-to-b from-[#3EFFFF66] to-[#00FF9966]">
+          <div className="p-2 text-center md:text-start md:p-6 lg:pt-20  lg:p-20 rounded-[40px] bg-gradient-to-b from-[#3EFFFF66] to-[#00FF9966]">
             <img src={iphoneMockup2} className="md:hidden block" alt="" />
 
             <h1 className="text-3xl lg:text-5xl my-4 font-semibold  text-[#2F313F]">

@@ -77,7 +77,7 @@ const Footer = () => {
           {/* Social Networks */}
           <div>
             <h1 className="text-2xl font-semibold text-white">Social Networks</h1>
-            <div className="flex gap-x-4 my-10">
+            <div className="flex gap-x-4 my-10 cursor-pointer">
               <div className="border bg-transparent duration-200 hover:border-none hover:bg-gradient-to-b from-[#3EFFFF] to-[#00FF99] rounded-full p-6">
                 <div>
                 <svg
