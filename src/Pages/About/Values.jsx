@@ -52,11 +52,11 @@ const Values = () => {
               className="relative block rounded-2xl border-b-[5px] border-[#00FF99]  shadow-xl p-4 sm:p-6 lg:p-4"
             >
               <div className="flex-col-reverse text-center pt-[40px]">
-                <h1 className="text-[24px] font-bold">
+                <h1 className="text-[20px] pb-4 lg:text-[24px] font-bold">
                   {data.title}
                 </h1>
-                <p className="text-xl text-[#231F20] lg:pt-[26px]">{data.body}</p>
-              </div>
+                <p className="text-[18px] lg:text-xl text-[#231F20] lg:pt-[26px]">{data.body}</p>
+              </div> 
             </div>
           ))}
         </div>

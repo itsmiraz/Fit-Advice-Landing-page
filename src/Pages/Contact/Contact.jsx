@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import { Link, ScrollRestoration } from "react-router-dom";
+
+
 import emailjs from "@emailjs/browser"; // <ScroollRestoration/>
 const Contact = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -16,12 +18,13 @@ const Contact = () => {
     e.preventDefault();
     setsend(true);
     const forme = e.target;
+
     emailjs
       .sendForm(
-        "service_uhoma6w",
-        "template_pb544kr",
+        import.meta.env.VITE_EMAILJS_SERVICE_KEY,
+        import.meta.env.VITE_EMAILJS_TEMPLATE,
         form.current,
-        "mOfuG__PVmEmox8lR"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         result => {
@@ -40,15 +43,15 @@ const Contact = () => {
 
 
   return (
-    <div className="py-[60px] px-0 md:px-0 lg:px-20">
+    <div className="py-[60px] px-0 md:px-4 lg:px-20">
       <div className="grid grid-cols-1 gap-[100px] lg:grid-cols-5">
         <div className="lg:col-span-2 text-center md:text-center lg:text-left">
           <h1 className="lg:text-[64px] text-[54px] font-bold mb-[20px] text-[#231F20]">
             Let{"'"}s Talk
           </h1>
           <p className="text-xl mb-[54px] text-[#231F20]">
-            Fill in this form to ask us your questions and give us your
-            feedback. The FitAdvice team will get back to you as soon as
+            Fill in this form to ask us your questions and give us <br className="lg:block hidden " /> your
+            feedback. The FitAdvice team will get back <br className="lg:block hidden " /> to you as soon as
             possible.
           </p>
           <h3 className="mb-[20px] text-[32px] line-[39px] font-bold text-[#231F20]">
@@ -68,7 +71,7 @@ const Contact = () => {
           </div>
         </div>
         {/* w-[565px] h-[838px] */}
-        <div className="p-8 lg:col-span-3 lg:p-6 lg:pl-56">
+        <div className="p-8 lg:col-span-3   md:p-40 lg:p-6 lg:pl-56">
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">
@@ -78,7 +81,7 @@ const Contact = () => {
                 <input
                   type="text"
                   required
-                  name="first_name"
+                  name="name"
                   className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg "
                 />
               </div>
@@ -114,6 +117,7 @@ const Contact = () => {
               </label>
               <select
                 required
+                name="option"
                 className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg text-[#B2B2B2]"
                 value={selectedOption}
                 onChange={handleChange}

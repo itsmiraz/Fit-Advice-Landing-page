@@ -1,37 +1,46 @@
 import { useState } from 'react';
 import logo from '../../../assets/Home-Page/logo.svg'
 import MainButton from '../../Modules/Buttons/Buttons';
-import { Link } from 'react-router-dom';
+import { Link,  useLocation } from 'react-router-dom';
 
 
 const Header = () => {
 
     const [show, setShow] = useState(false)
 
+    const location = useLocation();
+    const { pathname } = location;
+  
     return (
-      <div className="sticky top-0 z-50 bg-white mx-auto py-2 md:my-6 ">
-        <div className="justify-between px-3  md:px-20 items-center  flex">
+      <div className="sticky top-0 shadow-lg z-50 bg-white mx-auto lg:py-0 md:mb-6">
+        <div className="justify-between px-3 md:px-20 py-4  items-center  flex">
           <Link to={"/"}>
             <img src={logo} className="md:w-40 w-24 relative z-50 " alt="" />
           </Link>
           <div
-            className={`flex md:flex-row flex-col bg-white md:w-fit w-full right-2 md:space-y-0 space-y-2 md:static absolute ${
-              show ? " top-12 " : "top-[-500px]"
+            className={`flex lg:shadow-none shadow-lg lg:flex-row flex-col bg-white lg:w-fit w-full right-0 lg:pb-0 pb-4 lg:space-y-0 space-y-6 lg:static absolute ${
+              show ? " md:top-14 top-12 " : "top-[-500px]"
             }  ease-in-out duration-300 gap-x-10 items-center md:items-center`}
           >
             <Link to="/">
-              <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
+              <p onClick={()=>setShow(!show)} className={`text-xl text-[#333333]  ${pathname === '/' ? 'font-semibold border-b-4 border-[#3EFFFF]':"font-medium"} hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200`}>
                 Home
               </p>
             </Link>
-            <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
-              Corporate
-            </p>
-            <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
-              Become coach
-            </p>
+            <Link to={"/about"}>
+              <p onClick={()=>setShow(!show)} className={`text-xl text-[#333333]  ${pathname === '/about' ? 'font-semibold border-b-4 border-[#3EFFFF]':"font-medium"} hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200`}>
+             About US
+              </p>
+            </Link>
+           
+         
             <Link to={"/contact"}>
-              <p className="text-xl text-[#333333] hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200">
+              <p onClick={()=>setShow(!show)} className={`text-xl text-[#333333]  ${pathname === '/contacta' ? 'font-semibold border-b-4 border-[#3EFFFF]':"font-medium"} hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200`}>
+              Become Trainer
+              </p>
+            </Link>
+            <Link to={"/contact"}>
+              <p onClick={()=>setShow(!show)} className={`text-xl text-[#333333]  ${pathname === '/contact' ? 'font-semibold border-b-4 border-[#3EFFFF]':"font-medium"} hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200`}>
                 Contact
               </p>
             </Link>
@@ -45,7 +54,7 @@ const Header = () => {
           </div>
           <div
             onClick={() => setShow(!show)}
-            className="md:hidden md:absolute static block"
+            className="lg:hidden lg:absolute static block"
           >
             {show ? (
               <>
