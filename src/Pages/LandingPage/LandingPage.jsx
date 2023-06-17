@@ -61,7 +61,7 @@ const LandingPage = () => {
       {/* Hero */}
       <div
         id="head"
-        className="md:px-20 2xl:px-20   px-2  mx-auto grid grid-cols-1  lg:grid-cols-2 gap-10 md:gap-20 "
+        className="md:px-20 2xl:px-20   px-2  mx-auto grid grid-cols-1  my-10 lg:grid-cols-2 gap-10 md:gap-20 "
       >
         <div className="py-4 lg:text-start text-center lg:py-20 relative ">
           <h1 className="font-extrabold leading-14 md:leading-normal	 text-[#231F20] text-[45px] lg:text-6xl">
@@ -70,7 +70,7 @@ const LandingPage = () => {
             FitAdvice
           </h1>
           <p className="text-[#666666] my-6 text-sm md:text-xl">
-            Become the best version of yourself. Join FitAdvice and reach your
+            Become the best version of yourself. Join FitAdvice and reach your  <br className="lg:block hidden" />
             fitness goals today with the best fitness coaches
           </p>
           <a
@@ -137,7 +137,7 @@ const LandingPage = () => {
           </svg>
         </div>
         <div className="lg:order-last order-first">
-          <img src={heroImg} className="w-9/12 mx-auto lg:w-full " alt="" />
+          <img src={heroImg} className="lg:w-9/12 mx-auto w-full " alt="" />
         </div>
       </div>
 

@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import { Link, ScrollRestoration } from "react-router-dom";
+
+
 import emailjs from "@emailjs/browser"; // <ScroollRestoration/>
 const Contact = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -16,12 +18,13 @@ const Contact = () => {
     e.preventDefault();
     setsend(true);
     const forme = e.target;
+
     emailjs
       .sendForm(
-        "service_uhoma6w",
-        "template_pb544kr",
+        import.meta.env.VITE_EMAILJS_SERVICE_KEY,
+        import.meta.env.VITE_EMAILJS_TEMPLATE,
         form.current,
-        "mOfuG__PVmEmox8lR"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         result => {
@@ -47,8 +50,8 @@ const Contact = () => {
             Let{"'"}s Talk
           </h1>
           <p className="text-xl mb-[54px] text-[#231F20]">
-            Fill in this form to ask us your questions and give us <br  className="lg:block hidden "/> your
-            feedback. The FitAdvice team will get back <br  className="lg:block hidden "/> to you as soon as
+            Fill in this form to ask us your questions and give us <br className="lg:block hidden " /> your
+            feedback. The FitAdvice team will get back <br className="lg:block hidden " /> to you as soon as
             possible.
           </p>
           <h3 className="mb-[20px] text-[32px] line-[39px] font-bold text-[#231F20]">
@@ -78,7 +81,7 @@ const Contact = () => {
                 <input
                   type="text"
                   required
-                  name="first_name"
+                  name="name"
                   className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg "
                 />
               </div>
@@ -114,6 +117,7 @@ const Contact = () => {
               </label>
               <select
                 required
+                name="option"
                 className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg text-[#B2B2B2]"
                 value={selectedOption}
                 onChange={handleChange}
