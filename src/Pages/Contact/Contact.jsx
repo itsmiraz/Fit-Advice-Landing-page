@@ -5,6 +5,8 @@ import { Link, ScrollRestoration } from "react-router-dom";
 import emailjs from "@emailjs/browser"; // <ScroollRestoration/>
 const Contact = () => {
   const [selectedOption, setSelectedOption] = useState("");
+  const [Error, setError] = useState(false);
+  const [Success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
@@ -15,6 +17,8 @@ const Contact = () => {
   const form = useRef();
   const [send, setsend] = useState(false);
   const sendEmail = e => {
+
+
     e.preventDefault();
     setsend(true);
     const forme = e.target;
@@ -30,11 +34,13 @@ const Contact = () => {
         result => {
           console.log(result);
           forme.reset();
+          setSuccess(true)
           setsend(false);
         },
         error => {
           console.log(error.text);
           setsend(false)
+          setError(true)
         }
       );
   };
@@ -44,6 +50,17 @@ const Contact = () => {
 
   return (
     <div className="py-[60px] px-0 md:px-4 lg:px-20">
+
+      {
+
+        Success && <h1 className="text-center text-[35px] items-center justify-center font-semibold mb-10 flex gap-4 text-[#00FF99]">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.8958 37.5L8.02075 25.625L10.9895 22.6562L19.8958 31.5625L39.0103 12.4479L41.9791 15.4166L19.8958 37.5Z" fill="#00FF99" />
+          </svg>
+          The form has been sent successfully
+        </h1>
+      }
+
       <div className="grid grid-cols-1 gap-[100px] lg:grid-cols-5">
         <div className="lg:col-span-2 text-center md:text-center lg:text-left">
           <h1 className="lg:text-[64px] text-[54px] font-bold mb-[20px] text-[#231F20]">
@@ -82,7 +99,7 @@ const Contact = () => {
                   type="text"
                   required
                   name="name"
-                  className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg "
+                  className={` block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg `}
                 />
               </div>
 
@@ -146,6 +163,8 @@ const Contact = () => {
             >
               {send ? "  Submiting" : "  Submit"}
             </button>
+
+            <p className="text-end text-red">{Error && 'Something Went Wrong'}</p>
           </form>
         </div>
       </div>
