@@ -12,8 +12,8 @@ const Header = () => {
     const { pathname } = location;
   
     return (
-      <div className="sticky top-0 shadow-lg z-50 bg-white mx-auto lg:py-6 md:mb-6">
-        <div className="justify-between px-3 md:px-20 py-4 2xl:px-48 items-center  flex">
+      <div className="sticky top-0 shadow-lg z-50 bg-white mx-auto lg:py-0 md:mb-6">
+        <div className="justify-between px-3 md:px-20 py-4  items-center  flex">
           <Link to={"/"}>
             <img src={logo} className="md:w-40 w-24 relative z-50 " alt="" />
           </Link>
