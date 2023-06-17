@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div className="bg-[#100F1F] overflow-hidden relative px-4 lg:px-16 py-4 pt-10">
-      <div className="container relative z-40  px-4 lg:pr-32 grid md:gap-4 gap-10 grid-cols-5">
+      <div className="container relative z-40  px-4 lg:pr-32 grid md:gap-4 gap-0 lg:gap-10 grid-cols-5">
         <div className="col-span-5 md:col-span-2 flex flex-col justify-center md:justify-start md:items-start items-center">
           <div className="flex gap-2 items-center">
             <img src={logo} className="w-10" alt="" />
@@ -37,18 +37,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="col-span-5 flex flex-col justify-center md:justify-start items-center md:items-start  md:col-span-2 lg:col-span-1">
+        <div className="col-span-5  md:pt-0 lg:pt-0 pt-10 flex flex-col justify-center md:justify-start items-center md:items-start  md:col-span-2 lg:col-span-1">
           <h1 className="text-2xl font-semibold text-white">Explore</h1>
           <div className="py-4  md:py-10 flex flex-col justify-center md:justify-start items-center md:items-start">
             <Link to={"/"}>
-              <p className="text-lg my-2 text-white"> Home</p>
+              <p className="text-[16px] md:text-lg my-2 text-white"> Home</p>
             </Link>
             <Link to={"/about"}>
-              <p className="text-lg my-2 text-white"> About</p>
+              <p className="text-[16px] md:text-lg my-2 text-white"> About</p>
             </Link>
-            <p className="text-lg my-2 text-white"> How does it work?</p>
+            <p className="text-[16px] md:text-lg my-2 text-white"> How does it work?</p>
             <a href="#faq">
-              <p className="text-lg my-2 text-white"> FAQs</p>
+              <p className="text-[16px] md:text-lg my-2 text-white"> FAQs</p>
             </a>
           </div>
         </div>
@@ -56,44 +56,43 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold text-white">Ressources</h1>
           <div className="py-4  md:py-10 flex flex-col justify-center md:justify-start items-center md:items-start">
             <Link to={'/contact'}>
-              <p className="text-lg my-2 text-white">
+              <p className="text-[16px] md:text-lg my-2 text-white">
                 {" "}
                 Contact us
               </p>
             </Link>
             <Link to={'/contact'}>
-              <p className="text-lg my-2 text-white">Become coach</p>
+              <p className="text-[16px] md:text-lg my-2 text-white">Become coach</p>
             </Link>
             <Link to={'/contact'}>
 
 
-              <p className="text-lg my-2 text-white"> Corporate</p>
+              <p className="text-[16px] md:text-lg my-2 text-white"> Corporate</p>
             </Link>
 
           </div>
         </div>
-        <div className="col-span-5 md:col-start-3 md:flex-row flex flex-col justify-center md:justify-between lg:justify-start items-center md:items-start  md:col-span-5 lg:col-span-1">
+        <div className="col-span-5 md:col-start-3 md:flex-col flex flex-col justify-center md:justify-between lg:justify-start items-center md:items-start  md:col-span-5 lg:col-span-1">
 
           {/* Social Networks */}
           <div>
-            <h1 className="text-2xl font-semibold text-white">Social Networks</h1>
-            <div className="flex gap-x-4 my-10">
-              <div className="border bg-transparent duration-200 hover:border-none hover:bg-gradient-to-b from-[#3EFFFF] to-[#00FF99] rounded-full p-6">
-                <div>
-                <svg
-               
-               className="h-[20px] lg:w-[20px]"
-               viewBox="0 0 11 20"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-             >
-               <path
-                 d="M6.722 19.9999V10.8899H9.797L10.256 7.32294H6.722V5.05294C6.722 4.02094 7.011 3.32294 8.489 3.32294H10.378V0.13794C9.467 0.04394 8.552 -0.00205957 7.636 -5.95697e-05C4.919 -5.95697e-05 3.066 1.65694 3.066 4.69994V7.32294H0V10.8899H3.067V19.9999H6.722Z"
-                 fill="white"
-               />
-             </svg>
-              </div>
-              </div>
+            <h1 className="text-2xl md:text-start text-center font-semibold text-white">Social Networks</h1>
+            <div className="flex gap-x-6 my-10">
+
+
+              <a
+                href="https://www.instagram.com/fitadvice.be"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <div className="border bg-transparent duration-200 hover:border-none hover:bg-gradient-to-b from-[#3EFFFF] to-[#00FF99] rounded-full px-7 p-6">
+                  <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.722 20V10.89H9.797L10.256 7.323H6.722V5.053C6.722 4.021 7.011 3.323 8.489 3.323H10.378V0.138001C9.467 0.044001 8.552 -0.00199853 7.636 1.46544e-06C4.919 1.46544e-06 3.066 1.657 3.066 4.7V7.323H0V10.89H3.067V20H6.722Z" fill="white" />
+                  </svg>
+
+                </div>
+              </a>
+
 
               <a
                 href="https://www.instagram.com/fitadvice.be"
@@ -153,24 +152,25 @@ const Footer = () => {
           {/* Official Partner */}
 
           <div>
-            <h1 className="text-2xl font-semibold text-white">Official Partner</h1>
+            <h1 className="text-2xl  font-semibold text-white">Official Partner</h1>
             <Link target="_blank" to={'https://www.europeactive.eu/'}>
 
-              <img src={partnerImg} className="my-4" alt="" />
+              <img src={partnerImg} className="my-4 w-full mx-auto" alt="" />
             </Link>
           </div>
         </div>
       </div>
-      <div className="w-full h-[2px] bg-[#66666680]"></div>
+      <div className="w-full md:block hidden h-[2px] bg-[#66666680]"></div>
 
       <div className="flex   md:flex-row text-center flex-col justify-between items-center py-4 text-white">
         <p>Copyright ©2023. All Rights Reserved FitAdvice SRL</p>
+        <div className="w-full md:hidden block my-4 h-[1px] bg-[#FFFFFF]"></div>
 
-        <p>
+        <div className="flex gap-5">
           {" "}
           <Link to="/privacyPolicy">Privacy Policy</Link> |{" "}
           <Link to="/termsNconditions">Terms and Condition</Link>
-        </p>
+        </div>
       </div>
       <img
         src={logo}

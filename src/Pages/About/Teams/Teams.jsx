@@ -41,12 +41,12 @@ const Teams = () => {
         gesture and will hear your every whisper.
       </p>
       <div
-        className=" flex md:flex-row flex-col justify-center items-center md:gap-[32px] lg:flex lg:justify-center lg:items-center gap-16 lg:gap-[32px] pt-[48px] pb-[90px]"
+        className=" flex md:flex-row px-10 flex-col justify-center items-center md:gap-[32px] lg:flex lg:justify-center lg:items-center gap-16 lg:gap-[32px] pt-[48px] pb-[90px]"
       >
         {datas.map((data, i) => (
           <div
             key={i}
-            className="w-fit border border-[#DCDCDC] rounded-[30px] text-center p-8"
+            className="w-fit  border border-[#DCDCDC] rounded-[30px] text-center p-8"
           >
             <img src={data.img} alt="teams" />
             <p className="text-[18px] font-semibold ">{data.name}</p>

@@ -9,7 +9,7 @@ import { ScrollRestoration } from "react-router-dom";
 
 const About = () => {
     return (
-      <section className="relative">
+      <section className="relative px-0 md:px-10">
         <AboutHead />
         <Mission />
 
