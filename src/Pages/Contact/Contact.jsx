@@ -46,8 +46,6 @@ const Contact = () => {
   };
 
 
-
-
   return (
     <div className="py-[60px] px-0 md:px-4 lg:px-20">
 
