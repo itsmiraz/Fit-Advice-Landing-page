@@ -141,9 +141,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      
-
-
+    
       {/* What we Offer */}
       <div className="md:px-20 2xl:px-20   my-10 md:my-32 px-6 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-10 md:gap-20">
         <div className="order-first lg:order-first md:order-last">
@@ -783,7 +781,7 @@ const LandingPage = () => {
       </div>
 
       {/* Don't leave your fitness goals on hold. */}
-      <div className=" mx-auto px-4 lg:px-20 2xl:px-20  md:pt-0  my-20 md:my-40">
+      <div className=" mx-auto px-4 lg:px-20 2xl:px-20  md:pt-0  my-40 md:my-40">
         <div className="relative">
           <img
             src={iphoneMockup2}
@@ -797,13 +795,13 @@ const LandingPage = () => {
           />
 
           <div className="p-2 text-center md:text-start md:p-6 lg:pt-20  lg:p-20 rounded-xl bg-gradient-to-b from-[#3EFFFF66] to-[#00FF9966]">
-            <img src={iphoneMockup2} className="md:hidden block" alt="" />
+            <img src={iphoneMockup2} className="md:hidden -translate-y-20 block" alt="" />
 
-            <h1 className="text-3xl lg:text-5xl my-4 font-semibold  text-[#2F313F]">
+            <h1 className="text-[48px] -translate-y-10  text-center md:text-start lg:text-5xl my-4 font-semibold  text-[#2F313F]">
               Don{"'"}t leave your <br className="md:block hidden" /> fitness
               goals on hold.
             </h1>
-            <p className="text-[#666666] my-2">
+            <p className="text-[#666666] text-[18px] my-2">
               Sign up today on FitAdvice and make every <br className="md:block hidden" /> day a step towards{" "}
               <br className="lg:block hidden" /> a more active lifestyle!
             </p>
