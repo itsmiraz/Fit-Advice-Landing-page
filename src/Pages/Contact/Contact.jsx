@@ -79,8 +79,8 @@ const Contact = () => {
             Social Networks
           </h3>
           <div className="flex text-[16px] flex-col-reverse gap-5 text-[#231F20]">
-            <Link className="hover:underline">Instagram</Link>
-            <Link className="hover:underline">LinkedIn</Link>
+            <Link  href="https://www.instagram.com/fitadvice.be" className="hover:underline">Instagram</Link>
+            <Link   href="https://www.linkedin.com/company/fitadvice/" className="hover:underline">LinkedIn</Link>
             <Link className="hover:underline">Twitter</Link>
             <Link className="hover:underline">Facebook</Link>
           </div>
@@ -138,9 +138,9 @@ const Contact = () => {
                 onChange={handleChange}
               >
                 <option value="">Select...</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
+                <option value="option1">Corporate</option>
+                <option value="option2">Become trainer</option>
+                <option value="option3">Others</option>
               </select>
             </div>
 

@@ -7,15 +7,11 @@ import alldayIcon from "../../assets/Home-Page/24-7icon.svg";
 import discoverUs from "../../assets/Home-Page/discover-use-img.png";
 import discoverUsMobile from "../../assets/Home-Page/discove-us-mobie.png";
 import clientimg from "../../assets/Home-Page/client-image.png";
-import avater from "../../assets/Home-Page/avater.png";
-import quoteICon from "../../assets/Home-Page/qoute-icon.svg";
 import Accordion from "../../Components/Modules/Accordian/Accordian";
 import playstorebtn from "../../assets/Home-Page/Google Play.png";
 import applestorebtn from "../../assets/Home-Page/App Store.png";
 import iphoneMockup2 from "../../assets/Home-Page/mock-up-1.png";
 import iphones from "../../assets/Home-Page/iphones-2.png";
-import avater2 from "../../assets/Home-Page/avater2.jpeg";
-import avater3 from "../../assets/Home-Page/avater3.jpeg";
 
 import iphone1 from "../../assets/Home-Page/Iphones/iphone1.png";
 import iphone2 from "../../assets/Home-Page/Iphones/iphone2.png";
@@ -23,15 +19,9 @@ import iphone3 from "../../assets/Home-Page/Iphones/iphone3.png";
 import iphone4 from "../../assets/Home-Page/Iphones/iphone4.png";
 import iphone5 from "../../assets/Home-Page/Iphones/iphone5.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper";
-
-import "swiper/swiper-bundle.css";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
+import Carusel from "../../Components/Carusel/Carusel";
 
 const LandingPage = () => {
   const mobiles = [
@@ -61,15 +51,15 @@ const LandingPage = () => {
       {/* Hero */}
       <div
         id="head"
-        className="md:px-20 2xl:px-20   px-2  mx-auto grid grid-cols-1  my-10 lg:grid-cols-2 gap-10 md:gap-20 "
+        className="md:px-20 2xl:px-20   px-2  mx-auto grid grid-cols-1  my-4 lg:grid-cols-2 gap-10 md:gap-20 "
       >
         <div className="py-4 lg:text-start text-center lg:py-20 relative ">
           <h1 className="font-extrabold leading-14 md:leading-normal	 text-[#231F20] text-[45px] lg:text-6xl">
-            Transform <br />
+            Transform <br className="lg:block hidden" />
             your life with  <br className="lg:block hidden" />
             FitAdvice
           </h1>
-          <p className="text-[#666666] my-6 text-sm md:text-xl">
+          <p className="text-[#666666] my-6 text-[16px] md:text-xl">
             Become the best version of yourself. Join FitAdvice and reach your  <br className="lg:block hidden" />
             fitness goals today with the best fitness coaches
           </p>
@@ -137,18 +127,33 @@ const LandingPage = () => {
           </svg>
         </div>
         <div className="lg:order-last order-first">
-          <img src={heroImg} className="lg:w-9/12 mx-auto w-full " alt="" />
+          <svg className="absolute" width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5" clipPath="url(#clip0_213_10)">
+              <path d="M37.3595 2.63002L25.2095 13.17L14.6695 1.02002L2.62953 11.46L13.1695 23.61L1.01953 34.15L11.4595 46.19L23.6095 35.65L34.1495 47.8L46.1895 37.36L35.6495 25.21L47.7995 14.67L37.3595 2.63002Z" stroke="url(#paint0_linear_213_10)" strokeWidth="1.4438" strokeMiterlimit="10" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_213_10" x1="24.4036" y1="2.21024" x2="24.4036" y2="41.8602" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#3EFFFF" />
+                <stop offset="1" stopColor="#00FF99" />
+              </linearGradient>
+              <clipPath id="clip0_213_10">
+                <rect width="48.82" height="48.82" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <img src={heroImg} className="lg:w-9/12 mx-auto w-11/12 " alt="" />
         </div>
       </div>
 
-    
+
       {/* What we Offer */}
-      <div className="md:px-20 2xl:px-20   my-10 md:my-32 px-6 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-10 md:gap-20">
-        <div className="order-first lg:order-first md:order-last">
+      <div className="md:px-20 2xl:px-20   my-20 md:my-32 px-6 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-10 md:gap-20">
+        <div className="order-last lg:order-first md:order-last">
           <img src={iphoneMockup} className="w-full md:w-fit" alt="" />
         </div>
         <div>
-          <h1 className="text-4xl lg:text-start text-center lg:text-5xl text-[#333333] font-bold">
+          <h1 className="text-[45px] lg:text-start text-center lg:text-5xl text-[#333333] font-bold">
             What we offer
           </h1>
 
@@ -205,7 +210,7 @@ const LandingPage = () => {
                 Personalized coaching
               </p>
             </div>
-            <p className="text-[#666666] pl-0 lg:text-start text-center lg:pl-10 text-[16px] md:text-lg">
+            <p className="text-[#666666] pt-4 lg:pt-0 pl-0 lg:text-start text-center lg:pl-10 text-[16px] md:text-lg">
               FitAdvice offers personalized sports coaching with certified
               coaches. Whether you are a beginner or an experienced athlete, our
               coaches will guide you in reaching your fitness goals by adapting
@@ -266,7 +271,7 @@ const LandingPage = () => {
                 Flexibility and accessibility
               </p>
             </div>
-            <p className="text-[#666666] pl-0 lg:text-start text-center lg:pl-10 text-[16px] md:text-lg">
+            <p className="text-[#666666] pt-4 lg:pt-0 pl-0 lg:text-start text-center lg:pl-10 text-[16px] md:text-lg">
               Our application enables you to benefit from the services of a quality professional trainer, whatever your geographical location. You can book and select a trainer online, and communicate easily with your trainer via the platform, giving you total flexibility in your schedule.
             </p>
           </div>
@@ -324,12 +329,12 @@ const LandingPage = () => {
                 Progress tracking
               </p>
             </div>
-            <p className="text-[#666666] pl-0 lg:text-start text-center lg:pl-10 text-[16px] md:text-lg">
+            <p className="text-[#666666] pt-4 md:pt-0 pl-0 lg:text-start text-center lg:pl-10 text-[16px] md:text-lg">
               With FitAdvice, you have access to detailed tracking of your progress. You can record your performance, track your goals and view your training history. This feature allows you to stay motivated and measure your progress over time.
             </p>
           </div>
 
-          <div className="text-center lg:text-start">
+          <div className="text-center md:block hidden lg:text-start">
             <a
               href="https://play.google.com/store/apps/details?id=com.fitadvice.fitadvice"
               rel="noreferrer"
@@ -343,44 +348,44 @@ const LandingPage = () => {
 
       {/* Our Advantage */}
       <div className="my-20 md:px-10 lg:px-0 px-0">
-        <h1 className="text-center text-3xl  md:text-4xl font-bold text-[#231F20]">
+        <h1 className="text-center text-[35px]  md:text-4xl font-bold text-[#231F20]">
           Our advantages
         </h1>
-        <p className="text-center text-lg md:text-xl text-[#666666] my-4">
+        <p className="text-center px-4 pt-[42px] md:pt-0 text-lg md:text-xl text-[#666666] my-4">
           A fully secure platform, optimal searchability and 24/7 customer
           service. You deserve <br className="lg:block hidden" /> the best in
           your fitness journey, and we re here to support you every step of the
           way.
         </p>
 
-        <div className="container my-24 px-4   md:px-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <div className="p-3   shadow-md h-[356px] duration-200 hover:shadow-xl boder-none hover:border-b-8 rounded-xl border-[#00FF99] flex flex-col justify-center items-center">
+        <div className="container my-10 px-4   md:px-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="p-4 md:p-3  md:order-1 order-2 md:shadow-md h-[356px] duration-200 hover:shadow-xl boder-none hover:border-b-8 rounded-xl border-[#00FF99] flex flex-col justify-center items-center">
             <img src={saveIcon} alt="" />
             <h1 className="text-center text-2xl text-[#231F20] my-2 font-bold">
               Fully Secured
             </h1>
-            <p className="text-center text-lg text-[#666666] ">
+            <p className="text-center text-[16px] md:text-lg text-[#666666] ">
               Your Privacy and security are our top priority. FitAdvice provides
               a fully secure platform to ensure the confidentiality of your
               personal data and training information.
             </p>
           </div>
-          <div className="p-3   md:my-0 my-10 shadow-md h-[356px] duration-200 hover:shadow-xl boder-none hover:border-b-8 rounded-xl border-[#00FF99] flex flex-col justify-center items-center">
+          <div className="p-4 md:p-3 order-first md:order-2  md:my-0 my-10 md:shadow-md h-[356px] duration-200 hover:shadow-xl boder-none hover:border-b-8 rounded-xl border-[#00FF99] flex flex-col justify-center items-center">
             <img src={settingIcon} alt="" />
             <h1 className="text-center text-2xl text-[#231F20] my-2 font-bold">
               Easy To Find
             </h1>
-            <p className="text-center text-lg text-[#666666] ">
+            <p className="text-center text-[16px] md:text-lg text-[#666666] ">
               Our user-friendly interface and advanced search tools make it
               quick and easy to find the right coach for your specific needs.
             </p>
           </div>
-          <div className="p-3 max-w-[431px] mx-auto md:col-start-1 md:col-end-3  lg:col-start-3 lg:col-end-4  shadow-md h-[356px] duration-200 hover:shadow-xl boder-none hover:border-b-8 rounded-xl border-[#00FF99] flex flex-col justify-center items-center">
+          <div className="p-4 md:p-3 order-3 max-w-[431px] mx-auto md:col-start-1 md:col-end-3  lg:col-start-3 lg:col-end-4  md:shadow-md h-[356px] duration-200 hover:shadow-xl boder-none hover:border-b-8 rounded-xl border-[#00FF99] flex flex-col justify-center items-center">
             <img src={alldayIcon} alt="" />
             <h1 className="text-center text-2xl text-[#231F20] my-2 font-bold">
               24/7 Service
             </h1>
-            <p className="text-center text-lg text-[#666666] ">
+            <p className="text-center text-[16px] md:text-lg text-[#666666] ">
               Fitadvice offers 24/7 customer support. Whether you have
               questions, concerns or need assistance, our team is here to help
               you at any time.
@@ -390,7 +395,7 @@ const LandingPage = () => {
       </div>
 
       {/* Discover Us */}
-      <div className="my-20 md:my-40 relative">
+      <div className="mt-32 mb-20 md:my-40 relative">
         <div className="  lg:rounded-none rounded-2xl overflow-hidden ">
           <img
             src={discoverUs}
@@ -451,7 +456,7 @@ const LandingPage = () => {
           </h1>
         </div>
         <svg
-          className="absolute left-0 -top-36 opacity-80"
+          className="absolute -left-4 md:w-fit w-32 md:left-0 top-20 z-40 md:-top-36 opacity-80"
           width="177"
           height="150"
           viewBox="0 0 177 150"
@@ -480,11 +485,11 @@ const LandingPage = () => {
       </div>
 
       {/* Become a Coach Partner with FitAdvixe */}
-      <div id="becomecoach" className="px-0 md:px-10">
-        <h1 className="text-center text-3xl  md:text-4xl font-bold text-[#231F20]">
+      <div id="becomecoach" className="px-3 md:px-10">
+        <h1 className="text-center text-[35px]  md:text-4xl font-bold text-[#231F20]">
           Become a Coach Partner with FitAdvice{" "}
         </h1>
-        <p className="text-center  text-lg md:text-xl text-[#666666] my-4">
+        <p className="text-center  text-[16px] md:text-xl text-[#666666] my-4">
           Join the FitAdvice Coach Partners community now and grow your business
           by <br className="md:block hidden" /> offering your services to a
           global audience. Together, we can transform the lives of{" "}
@@ -500,7 +505,7 @@ const LandingPage = () => {
 
 
         {/* for mobile device */}
-        <div className="flex flex-col gap-[40px] px-[90px] pt-[52px] md:hidden lg:hidden">
+        <div className="flex flex-col gap-[40px] px-[50px] pt-[22px] md:hidden lg:hidden">
           {mobiles.map((m, i) => (
             <img key={i} src={m.img} alt="" />
           ))}
@@ -514,121 +519,16 @@ const LandingPage = () => {
 
       {/* Testimonials */}
       <div className="grid relative  my-20 md:my-20 grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
-        <div className="p-4 md:p-20">
-          <h1 className="text-[30px] md:text-start text-center md:text-5xl leading-none font-bold text-[#231F20]">
+        <div className="p-6 md:p-20">
+          <h1 className="text-[35px] md:text-start text-center md:text-5xl leading-none font-bold text-[#231F20]">
             Our Happy Clients
             <br className="" />
             Says About Us
           </h1>
 
           <div>
-            <Swiper
-              pagination={{
-                dynamicBullets: true,
-              }}
-              loop={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              modules={[Pagination, Autoplay]}
-              className="mySwiper my-10 h-fit"
-            >
-              <SwiperSlide>
-                <div className="px-3">
-                  <p className="text-center md:text-start text-sm md:text-lg text-[#666666] my-4">
-                    As a sports coach specializing in physical preparation for
-                    endurance sports, FitAdvice is the perfect tool to reach a
-                    wider audience. Through the app, I can share my skills and
-                    expertise with clients from all over the world, regardless
-                    of their geographical location. The platform also makes it
-                    easy to manage my workouts, availability and payments.
-                    FitAdvice has truly transformed my coaching business and
-                    opened up new opportunities.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex  my-4 gap-4 items-center">
-                      <div>
-                        <img
-                          src={avater}
-                          alt=""
-                          className="w-20 md:w-24 my-2 h-20 md:h-24 rounded-full"
-                        />
-                      </div>
-                      <div>
-                        <p className="text-2xl text-[#231F20] font-bold ">
-                          David
-                        </p>
-                        <p className="text-lg">Sports coach</p>
-                      </div>
-                    </div>
-                    <div className="flex opacity-50 gap-x-4">
-                      <img src={quoteICon} alt="" />
-                      <img src={quoteICon} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="px-3">
-                  <p className="text-center md:text-start text-sm md:text-lg text-[#666666] my-4">
-                    I was delighted with my first golf session! Matthieu is
-                    passionate about what he does, he instills confidence, takes
-                    the time to explain things, and adapts to our pace, level
-                    and goals. Go for it with your eyes closed!
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex  my-4 gap-4 items-center">
-                      <div className="w-20 md:w-24 my-2 h-20 md:h-24 overflow-hidden rounded-full">
-                        <img src={avater2} alt="" className="" />
-                      </div>
-                      <div>
-                        <p className="text-2xl text-[#231F20] font-bold ">
-                          {" "}
-                          Marc
-                        </p>
-                        <p className="text-lg">The coachee</p>
-                      </div>
-                    </div>
-                    <div className="flex opacity-50 gap-x-4">
-                      <img src={quoteICon} alt="" />
-                      <img src={quoteICon} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="px-3">
-                  <p className="text-center md:text-start text-sm md:text-lg text-[#666666] my-4">
-                    As a businessman with a passion for sport, this application
-                    literally won me over. It provides competent, personalized
-                    sports coaches, which has considerably improved my
-                    performance. What{"'"}s more, it makes it much easier to
-                    manage my sporting activities. I highly recommend it to all
-                    business people who want to combine professional success
-                    with sporting well-being.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex  my-4 gap-4 items-center">
-                      <div className="w-20 md:w-24 my-2 h-20 md:h-24 overflow-hidden rounded-full">
-                        <img src={avater3} alt="" className="" />
-                      </div>
-                      <div>
-                        <p className="text-2xl text-[#231F20] font-bold ">
-                          {" "}
-                          Henry
-                        </p>
-                        <p className="text-lg">The coachee</p>
-                      </div>
-                    </div>
-                    <div className="flex opacity-50 gap-x-4">
-                      <img src={quoteICon} alt="" />
-                      <img src={quoteICon} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+            <Carusel />
+
           </div>
         </div>
         <div className="relative">
@@ -664,10 +564,10 @@ const LandingPage = () => {
 
       {/* FAQ */}
       <div id="faq" className="my-10 md:my-40 px-2 md:px-20 ">
-        <h1 className="text-center text-3xl md:text-4xl font-bold text-[#231F20]">
+        <h1 className="text-center text-[48px] md:text-4xl font-bold text-[#231F20]">
           Frequently asked questions
         </h1>
-        <p className="text-center text-lg md:text-xl text-[#666666] my-4">
+        <p className="text-center text-[16px] md:text-xl text-[#666666] my-4">
           Find the answers to all your questions and choose with confidence
           among our qualified <br className="md:block hidden" /> and experienced
           coaches thanks to our complete FAQ on FitAdvice!
@@ -761,7 +661,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      
+
 
       {/* Still Have a Question */}
       <div>
@@ -819,6 +719,9 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+
+    <ScrollRestoration/>
     </section>
   );
 };
