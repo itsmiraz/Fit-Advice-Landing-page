@@ -49,12 +49,18 @@ const Footer = () => {
               <p className="text-[16px] md:text-lg my-2 text-white"> Home</p>
             </Link>
             <Link to={"/about"}>
-              <p className="text-[16px] md:text-lg my-2 text-white"> About</p>
+              <p className="text-[16px] md:text-lg my-2 text-white"> About Us</p>
             </Link>
-            <p className="text-[16px] md:text-lg my-2 text-white"> How does it work?</p>
-            <a href="#faq">
+            <Link to={'/contact'}>
+        
+            <p className="text-[16px] md:text-lg my-2 text-white">How does it work?</p>
+            </Link>
+         
+            <Link to={'/#faq'}>
+            
               <p className="text-[16px] md:text-lg my-2 text-white"> FAQs</p>
-            </a>
+              </Link>
+
           </div>
         </div>
         <div className="col-span-5 flex flex-col justify-center md:justify-start items-center md:items-start md:col-span-3  lg:col-span-1">

@@ -3,7 +3,7 @@ import { ScrollRestoration } from "react-router-dom";
 const PrivacyPolicy = () => {
     return (
       <div className=" px-20 mx-auto">
-        <div className="py-10">
+        <div className="pt-[90px]">
           <h1 className=" text-[35px] md:text-[50px] font-bold mb-[55px] text-center">
             FITADVICE PRIVACY POLICY
           </h1>

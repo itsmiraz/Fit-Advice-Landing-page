@@ -78,11 +78,11 @@ const Contact = () => {
           <h3 className="text-[32px] line-[39px] font-bold mb-[20px] text-[#231F20]">
             Social Networks
           </h3>
-          <div className="flex text-[16px] flex-col-reverse gap-5 text-[#231F20]">
-            <Link  href="https://www.instagram.com/fitadvice.be" className="hover:underline">Instagram</Link>
-            <Link   href="https://www.linkedin.com/company/fitadvice/" className="hover:underline">LinkedIn</Link>
+          <div className="flex text-[16px] flex-col gap-5 text-[#231F20]">
+            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/fitadvice.be" className="hover:underline">Instagram</a>
+            <a target="_blank" rel="noreferrer"  href="https://www.linkedin.com/company/fitadvice/" className="hover:underline">LinkedIn</a>
             <Link className="hover:underline">Twitter</Link>
-            <Link className="hover:underline">Facebook</Link>
+            <a target="_blank" rel="noreferrer" href='https://web.facebook.com/profile.php?id=100093517743961&_rdc=1&_rdr' className="hover:underline">Facebook</a>
           </div>
         </div>
         {/* w-[565px] h-[838px] */}
@@ -133,14 +133,14 @@ const Contact = () => {
               <select
                 required
                 name="option"
-                className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg text-[#B2B2B2]"
+                className="block w-full px-5 py-2.5 mt-2 bg-white border border-gray-200 rounded-lg text-gray-600"
                 value={selectedOption}
                 onChange={handleChange}
               >
                 <option value="">Select...</option>
-                <option value="option1">Corporate</option>
-                <option value="option2">Become trainer</option>
-                <option value="option3">Others</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Become trainer">Become trainer</option>
+                <option value="Others">Others</option>
               </select>
             </div>
 
@@ -166,6 +166,16 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      {
+
+Success && <h1 className="text-center text-[18px] items-center justify-center font-semibold mb-10 flex gap-4 text-[#00FF99]">
+  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.8958 37.5L8.02075 25.625L10.9895 22.6562L19.8958 31.5625L39.0103 12.4479L41.9791 15.4166L19.8958 37.5Z" fill="#00FF99" />
+  </svg>
+  The form has been sent successfully
+</h1>
+}
       <ScrollRestoration />
     </div>
   );

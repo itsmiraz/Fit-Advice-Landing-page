@@ -20,7 +20,7 @@ const Carusel = () => {
       details: " As a sports coach specializing in physical preparation for endurance sports, FitAdvice is the perfect tool to reach a wider audience. Through the app, I can share my skills and expertise with clients from all over the world, regardless of their geographical location.The platform also makes it easy to manage my workouts, availability and payments.FitAdvice has truly transformed my coaching business and opened up new opportunities.",
       avater: avater,
       name: "David",
-      title: "Sports coach"
+      title: "Profesionnal Trainer"
 
     },
     {

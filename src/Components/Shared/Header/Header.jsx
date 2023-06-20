@@ -27,7 +27,7 @@ const Header = () => {
             </Link>
             <Link to={"/about"}>
               <p onClick={()=>setShow(!show)} className={`text-xl text-[#333333] font-medium  hover:font-semibold hover:border-b-4 hover:border-[#3EFFFF] cursor-pointer duration-200`}>
-             About US
+             About Us
               </p>
             </Link>
            

@@ -54,7 +54,7 @@ const LandingPage = () => {
         className="md:px-20 2xl:px-20   px-2  mx-auto grid grid-cols-1  my-4 lg:grid-cols-2 gap-10 md:gap-20 "
       >
         <div className="py-4 lg:text-start text-center lg:py-20 relative ">
-          <h1 className="font-extrabold leading-14 md:leading-normal	 text-[#231F20] text-[45px] lg:text-6xl">
+          <h1 className="font-extrabold md:leading-[96px]  text-[#231F20] text-[45px] lg:text-[64px]">
             Transform <br className="lg:block hidden" />
             your life with  <br className="lg:block hidden" />
             FitAdvice
@@ -563,7 +563,7 @@ const LandingPage = () => {
       </div>
 
       {/* FAQ */}
-      <div id="faq" className="my-10 md:my-40 px-2 md:px-20 ">
+      <div id="faq" className="my-10 md:mt-40 px-2 md:px-20 ">
         <h1 className="text-center text-[48px] md:text-4xl font-bold text-[#231F20]">
           Frequently asked questions
         </h1>
@@ -572,7 +572,7 @@ const LandingPage = () => {
           among our qualified <br className="md:block hidden" /> and experienced
           coaches thanks to our complete FAQ on FitAdvice!
         </p>
-        <div className="grid  grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-20 container mx-auto">
+        <div className="grid  grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-[62px] container mx-auto">
           <div>
             <Accordion
               title=" What is FitAdvice?"
@@ -694,7 +694,7 @@ const LandingPage = () => {
             alt=""
           />
 
-          <div className="p-2 text-center md:text-start md:p-6 lg:pt-20  lg:p-20 rounded-xl bg-gradient-to-b from-[#3EFFFF66] to-[#00FF9966]">
+          <div className="p-2 text-center md:text-start md:p-6 lg:pt-20  lg:p-20 rounded-3xl bg-gradient-to-b from-[#3EFFFF66] to-[#00FF9966]">
             <img src={iphoneMockup2} className="md:hidden -translate-y-20 block" alt="" />
 
             <h1 className="text-[48px] md:-translate-y-0 -translate-y-10  text-center md:text-start lg:text-5xl my-4 font-semibold  text-[#2F313F]">

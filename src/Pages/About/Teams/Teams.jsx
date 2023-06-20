@@ -36,10 +36,7 @@ const Teams = () => {
         who we are
       </h4>
       <h1 className="text-[42px] font-bold text-center">Meet our team</h1>
-      <p className="text-center text-xl font-[500px]">
-        Just take a look - each member of the team is watching your every <br />
-        gesture and will hear your every whisper.
-      </p>
+     
       <div
         className=" flex md:flex-row px-10 flex-col justify-center items-center md:gap-[32px] lg:flex lg:justify-center lg:items-center gap-16 lg:gap-[32px] pt-[48px] pb-[90px]"
       >
