@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="col-span-5  md:pt-0 lg:pt-0 pt-10 flex flex-col justify-center md:justify-start items-center md:items-start  md:col-span-2 lg:col-span-1">
           <h1 className="text-2xl font-semibold text-white">Explore</h1>
-          <div className="py-4  md:py-10 flex flex-col justify-center md:justify-start items-center md:items-start">
+          <div className="py-4  md:py-[35px] flex flex-col justify-center md:justify-start items-center md:items-start">
             <Link to={"/"}>
               <p className="text-[16px] md:text-lg my-2 text-white"> Home</p>
             </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         <div className="col-span-5 flex flex-col justify-center md:justify-start items-center md:items-start md:col-span-3  lg:col-span-1">
           <h1 className="text-2xl font-semibold text-white">Ressources</h1>
-          <div className="py-4  md:py-10 flex flex-col justify-center md:justify-start items-center md:items-start">
+          <div className="py-4  md:py-[35px] flex flex-col justify-center md:justify-start items-center md:items-start">
             <Link to={'/contact'}>
               <p className="text-[16px] md:text-lg my-2 text-white">
                 {" "}

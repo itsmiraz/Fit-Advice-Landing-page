@@ -60,7 +60,7 @@ const LandingPage = () => {
             FitAdvice
           </h1>
           <p className="text-[#666666] my-6 text-[16px] md:text-xl">
-            Become the best version of yourself. Join FitAdvice and reach your  <br className="lg:block hidden" />
+            Become the best version of yourself. Join FitAdvice and reach your  <br className="2xl:block hidden" />
             fitness goals today with the best fitness coaches
           </p>
           <a
@@ -697,13 +697,13 @@ const LandingPage = () => {
           <div className="p-2 text-center md:text-start md:p-6 lg:pt-20  lg:p-20 rounded-xl bg-gradient-to-b from-[#3EFFFF66] to-[#00FF9966]">
             <img src={iphoneMockup2} className="md:hidden -translate-y-20 block" alt="" />
 
-            <h1 className="text-[48px] -translate-y-10  text-center md:text-start lg:text-5xl my-4 font-semibold  text-[#2F313F]">
+            <h1 className="text-[48px] md:-translate-y-0 -translate-y-10  text-center md:text-start lg:text-5xl my-4 font-semibold  text-[#2F313F]">
               Don{"'"}t leave your <br className="md:block hidden" /> fitness
               goals on hold.
             </h1>
             <p className="text-[#666666] text-[18px] my-2">
-              Sign up today on FitAdvice and make every <br className="md:block hidden" /> day a step towards{" "}
-              <br className="lg:block hidden" /> a more active lifestyle!
+              Sign up today on FitAdvice and make every <br className="2xl:hidden md:block hidden" /> day a step towards{" "}
+              <br className="2xl:block hidden" /> a more active lifestyle!
             </p>
             <div className="flex flex-wrap md:justify-start justify-center items-center">
               <img src={applestorebtn} alt="" />

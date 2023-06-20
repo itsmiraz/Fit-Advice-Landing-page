@@ -65,8 +65,8 @@ const Contact = () => {
             Let{"'"}s Talk
           </h1>
           <p className="text-xl mb-[54px] text-[#231F20]">
-            Fill in this form to ask us your questions and give us <br className="lg:block hidden " /> your
-            feedback. The FitAdvice team will get back <br className="lg:block hidden " /> to you as soon as
+            Fill in this form to ask us your questions and give us <br className="2xl:block lg:hidden hidden " /> your
+            feedback. The FitAdvice team will get back <br className="2xl:block lg:hidden hidden " /> to you as soon as
             possible.
           </p>
           <h3 className="mb-[20px] text-[32px] line-[39px] font-bold text-[#231F20]">
