@@ -21,8 +21,8 @@ const Values = () => {
       },
 
       {
-        title: "Commitment to well-being",
-        body: "We believe in collaboration and team spirit. Together with our professional trainers, users and partners, we create a harmonious and rewarding experience.",
+        title: "Community",
+        body: "We believe in the power of mutual support within our FitAdvice community. We encourage our users to share their successes, inspire each other.",
       },
       {
         title: "Commitment to well-being",
@@ -52,7 +52,7 @@ const Values = () => {
               className="relative block rounded-2xl border-b-[5px] border-[#00FF99]  shadow-xl p-2 lg:p-4"
             >
               <div className="flex-col-reverse text-center pt-[40px]">
-                <h1 className=" text-[25px] md:text-[20px] pb-4 lg:text-[24px] font-bold">
+                <h1 className=" text-[25px] md:text-[20px] lg:text-[24px] font-bold">
                   {data.title}
                 </h1>
                 <p className="text-[18px] lg:text-xl text-[#231F20] lg:pt-[26px]">{data.body}</p>
